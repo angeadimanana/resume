@@ -1,131 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Scientist Name">
-    <meta name="description" content="Homepage of [Scientist's Name], researcher in enumerative and analytic combinatorics">
-    <title>[Scientist's Name] - Homepage</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #007BFF;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        header h1 {
-            margin: 0;
-        }
-        nav {
-            background-color: #333;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        section {
-            margin: 20px;
-        }
-        h2 {
-            color: #007BFF;
-        }
-        .content {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .content > div {
-            flex: 1;
-            padding: 10px;
-            min-width: 250px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ange ADIMANANA">
+  <meta name="description" content="Resume of Ange ADIMANANA, Applied Mathematician and AI enthusiast">
+  <title>Ange ADIMANANA - Resume</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #003366;
+      --accent: #007BFF;
+      --light: #f4f4f4;
+      --text: #333;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background-color: var(--light);
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 40px 15px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #eaeaea;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      background: #222;
+      overflow-x: auto;
+    }
+
+    .tabs button {
+      background: transparent;
+      border: none;
+      color: white;
+      padding: 14px 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .tabs button:hover,
+    .tabs button.active {
+      background: var(--accent);
+    }
+
+    section {
+      display: none;
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      color: var(--primary);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 6px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .edu-item, .exp-item {
+      margin-bottom: 15px;
+    }
+
+    .edu-item strong,
+    .exp-item strong {
+      color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #222;
+      color: #ccc;
+      font-size: 0.9rem;
+      margin-top: 30px;
+    }
+
+    .contact {
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+
+    .contact i {
+      color: var(--accent);
+      margin-right: 6px;
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 20px; }
+      .tabs button { padding: 10px 12px; font-size: 0.9rem; }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>[Scientist's Name]</h1>
-        <p>Researcher in Enumerative and Analytic Combinatorics</p>
-    </header>
+
+  <header>
+    <h1>Ange ADIMANANA</h1>
+    <p>Applied Mathematician | AI for Science | Aviation enthusiast</p>
+    <div class="contact">
+      <i class="fas fa-map-marker-alt"></i> South Africa |
+      <i class="fas fa-envelope"></i> <a href="mailto:angenotahin@aims.ac.za" style="color:#eaeaea;">angenotahin@aims.ac.za</a> |
+      <i class="fas fa-phone"></i> +261 34 74 019 72
+    </div>
+  </header>
+
+  <div class="tabs">
+    <button class="tablink active" onclick="openTab(event, 'education')">Education</button>
+    <button class="tablink" onclick="openTab(event, 'programs')">Programs</button>
+    <button class="tablink" onclick="openTab(event, 'experience')">Experience</button>
+    <button class="tablink" onclick="openTab(event, 'skills')">Skills</button>
+    <button class="tablink" onclick="openTab(event, 'interests')">Interests</button>
+  </div>
+
+  <section id="education" class="active">
+    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+    <div class="edu-item">
+      <strong>African Institute for Mathematical Sciences (AIMS)</strong> — South Africa <br>
+      <em>Google DeepMind Scholar, AI for Science Stream</em> (2025–Present) <br>
+      <ul>
+        <li>Quantum Computing, Monte Carlo Methods in ML, Bayesian Inference, NLP, Machine Learning at Scale</li>
+      </ul>
+    </div>
+
+    <div class="edu-item">
+      <strong>University of Antananarivo</strong> — Madagascar <br>
+      <em>MSc in Applied Mathematics</em> (2024–2025) <br>
+      <ul>
+        <li>Combinatorics & Optimization, Convex Optimization, Graph Theory, Option Pricing</li>
+      </ul>
+    </div>
+
+    <div class="edu-item">
+      <strong>University of Antananarivo</strong> — Madagascar <br>
+      <em>MSc in Mathematics, Algorithmic Finance & Computer Science (MAFI)</em> (2024–2025)
+      <ul>
+        <li>Algebraic Cryptography, Coding Theory, Advanced Algorithms, Machine Learning</li>
+      </ul>
+    </div>
+
+    <div class="edu-item">
+      <strong>University of Antananarivo</strong> — Madagascar <br>
+      <em>BSc in Applied Mathematics</em> (2020–2023)
+    </div>
     
-    <nav>
-        <a href="#cv">CV</a>
-        <a href="#research">Research Interests</a>
-        <a href="#publications">Publications</a>
-        <a href="#tasks">Tasks</a>
-    </nav>
+    <div class="edu-item">
+      <strong>Ecole Nationale d'Enseignement Aeronautique et Météorologique (ENEAM)</strong> — Ivato Madagascar <br>
+      <em>Theoretical License for private pilot license and commercial pilot license </em> (2020–2021)
+    </div>
 
-    <section id="cv">
-        <h2>Curriculum Vitae</h2>
-        <div class="content">
-            <div>
-                <h3>Education</h3>
-                <ul>
-                    <li><strong>PhD in Mathematics</strong>, University XYZ, 20XX-20XX</li>
-                    <li><strong>MS in Mathematics</strong>, University ABC, 20XX-20XX</li>
-                    <li><strong>BS in Mathematics</strong>, University DEF, 20XX-20XX</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Professional Experience</h3>
-                <ul>
-                    <li><strong>Postdoctoral Researcher</strong>, Institute of Combinatorics, 20XX-Present</li>
-                    <li><strong>Assistant Professor</strong>, Department of Mathematics, University XYZ, 20XX-20XX</li>
-                    <li><strong>Graduate Teaching Assistant</strong>, University ABC, 20XX-20XX</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    <div class="edu-item">
+      <strong>Houssen Memorial High School Tulear</strong> — Madagascar <br>
+      <em>Baccalaureate Option C</em> (2019)
+    </div>
+  </section>
 
-    <section id="research">
-        <h2>Research Interests</h2>
-        <p>I specialize in enumerative and analytic combinatorics, focusing on the following areas:</p>
+  <section id="programs">
+    <h2><i class="fas fa-flask"></i> Academic Programs & Certifications</h2>
+    <p><strong>CIMPA School – Stellenbosch University</strong> (Jan 2025, South Africa)<br>
+    <em>Enumerative Combinatorics and its Applications to Computer Science</em></p>
+
+    <p><strong>ENEAM Ivato Madagascar (Flight School)</strong> (2020–2023, Madagascar)<br>
+    <em>Private Pilot License (PPL) – Single Engine Piston</em></p>
+  </section>
+
+  <section id="experience">
+    <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+    <div class="exp-item">
+      <strong>Sky Services Madagascar</strong> — Ground Operations Intern (Flight Preparation)<br>
+      <em>Oct – Dec 2023, Madagascar</em>
+      <ul>
+        <li>Assisted in technical flight planning and ground operation logistics for private aviation.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2><i class="fas fa-code"></i> Technical Skills</h2>
+    <ul>
+      <li><strong>Programming & Mathematics:</strong> Python, SageMath, SQL, LaTeX</li>
+      <li><strong>Languages:</strong>
         <ul>
-            <li>Enumerative counting of combinatorial structures</li>
-            <li>Asymptotic analysis of combinatorial sequences</li>
-            <li>Applications of generating functions in combinatorics</li>
-            <li>Exact and approximate methods in counting problems</li>
+          <li>English – Intermediate</li>
+          <li>French – DELF B2 Certification</li>
+          <li>Malagasy – Native</li>
         </ul>
-    </section>
+      </li>
+    </ul>
+  </section>
 
-    <section id="publications">
-        <h2>Publications</h2>
-        <ul>
-            <li><strong>[Author(s)], Title of the Paper</strong>, Journal Name, Year.</li>
-            <li><strong>[Author(s)], Title of the Paper</strong>, Journal Name, Year.</li>
-            <li><strong>[Author(s)], Title of the Paper</strong>, Journal Name, Year.</li>
-        </ul>
-    </section>
+  <section id="interests">
+    <h2><i class="fas fa-heart"></i> Interests</h2>
+    <ul>
+      <li><strong>Aviation:</strong> Passionate about piloting and aerospace technologies.</li>
+      <li><strong>Sports:</strong> Football and Basketball.</li>
+    </ul>
+  </section>
 
-    <section id="tasks">
-        <h2>Current Tasks</h2>
-        <ul>
-            <li>Research on asymptotic enumeration of combinatorial classes.</li>
-            <li>Writing a paper on generating functions for non-crossing partitions.</li>
-            <li>Collaborating with a team on an algorithmic approach to counting graph structures.</li>
-        </ul>
-    </section>
+  <footer>
+    &copy; 2026 Ange ADIMANANA. All rights reserved.
+  </footer>
 
-    <footer>
-        <p>&copy; 2025 [Scientist's Name]. All rights reserved.</p>
-    </footer>
+  <script>
+    function openTab(evt, tabName) {
+      const sections = document.querySelectorAll("section");
+      const tabs = document.querySelectorAll(".tablink");
+      sections.forEach(s => s.classList.remove("active"));
+      tabs.forEach(t => t.classList.remove("active"));
+      document.getElementById(tabName).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+  </script>
 </body>
 </html>
-
